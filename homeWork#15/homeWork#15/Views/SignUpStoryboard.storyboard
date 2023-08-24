@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Create Account View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="CreateAccountViewController" customModule="homeWork_15" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,6 +211,21 @@
                             <constraint firstItem="7x4-JN-MSP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="sqD-zM-uqw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPassTextField" destination="hl2-gJ-GjJ" id="QPu-QH-blN"/>
+                        <outlet property="continueButton" destination="ysb-Rj-PXa" id="wjo-sn-XX2"/>
+                        <outlet property="emailTextField" destination="E0j-wG-J4V" id="czJ-EM-DdC"/>
+                        <outlet property="errorConfirmPassLbl" destination="yjD-oX-fxq" id="xfh-eq-jrN"/>
+                        <outlet property="errorEmailLbl" destination="eaL-rr-vOJ" id="ezy-cn-8oE"/>
+                        <outlet property="errorPasswrodLbl" destination="Xey-vF-DUS" id="cCp-hi-WOR"/>
+                        <outlet property="nameTextField" destination="RsR-21-jFz" id="MKL-TH-S9U"/>
+                        <outlet property="passwordTextField" destination="IDv-UR-Dcy" id="7zm-CJ-Odn"/>
+                        <outlet property="scrollView" destination="7x4-JN-MSP" id="9ki-uM-Loc"/>
+                        <outletCollection property="strongPassIndicatorsViews" destination="fh9-Yv-496" collectionClass="NSMutableArray" id="enK-bS-9o2"/>
+                        <outletCollection property="strongPassIndicatorsViews" destination="bK8-eb-xvB" collectionClass="NSMutableArray" id="xdV-wj-SIB"/>
+                        <outletCollection property="strongPassIndicatorsViews" destination="UJx-rg-mOC" collectionClass="NSMutableArray" id="PLn-7K-iH2"/>
+                        <outletCollection property="strongPassIndicatorsViews" destination="QYZ-xy-84O" collectionClass="NSMutableArray" id="sE5-eb-vll"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

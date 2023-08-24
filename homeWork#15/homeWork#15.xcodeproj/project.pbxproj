@@ -15,6 +15,7 @@
 		BC1B83AB2A96831000FFB734 /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1B83AA2A96831000FFB734 /* SignInStoryboard.storyboard */; };
 		BC1B83B82A97594500FFB734 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1B83B72A97594500FFB734 /* SignUpStoryboard.storyboard */; };
 		BC1B83BA2A975DCB00FFB734 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1B83B92A975DCB00FFB734 /* SignInViewController.swift */; };
+		BC1B83BC2A9771D100FFB734 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1B83BB2A9771D100FFB734 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BC1B83AA2A96831000FFB734 /* SignInStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInStoryboard.storyboard; sourceTree = "<group>"; };
 		BC1B83B72A97594500FFB734 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		BC1B83B92A975DCB00FFB734 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BC1B83BB2A9771D100FFB734 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				BC1B83B92A975DCB00FFB734 /* SignInViewController.swift */,
+				BC1B83BB2A9771D100FFB734 /* CreateAccountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1B83BC2A9771D100FFB734 /* CreateAccountViewController.swift in Sources */,
 				BC1B83912A9678F800FFB734 /* AppDelegate.swift in Sources */,
 				BC1B83932A9678F800FFB734 /* SceneDelegate.swift in Sources */,
 				BC1B83BA2A975DCB00FFB734 /* SignInViewController.swift in Sources */,
