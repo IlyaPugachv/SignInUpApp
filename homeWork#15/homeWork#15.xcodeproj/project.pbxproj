@@ -13,6 +13,8 @@
 		BC1B839A2A9678FA00FFB734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1B83992A9678FA00FFB734 /* Assets.xcassets */; };
 		BC1B839D2A9678FA00FFB734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1B839B2A9678FA00FFB734 /* LaunchScreen.storyboard */; };
 		BC1B83AB2A96831000FFB734 /* SignInStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1B83AA2A96831000FFB734 /* SignInStoryboard.storyboard */; };
+		BC1B83B82A97594500FFB734 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1B83B72A97594500FFB734 /* SignUpStoryboard.storyboard */; };
+		BC1B83BA2A975DCB00FFB734 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1B83B92A975DCB00FFB734 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BC1B839C2A9678FA00FFB734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC1B839E2A9678FA00FFB734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC1B83AA2A96831000FFB734 /* SignInStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInStoryboard.storyboard; sourceTree = "<group>"; };
+		BC1B83B72A97594500FFB734 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		BC1B83B92A975DCB00FFB734 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		BC1B838F2A9678F800FFB734 /* homeWork#15 */ = {
 			isa = PBXGroup;
 			children = (
+				BC1B83B62A9758D000FFB734 /* Controllers */,
 				BC1B83A52A967D9B00FFB734 /* Views */,
 				BC1B83992A9678FA00FFB734 /* Assets.xcassets */,
 				BC1B839E2A9678FA00FFB734 /* Info.plist */,
@@ -76,11 +81,20 @@
 		BC1B83A52A967D9B00FFB734 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BC1B83AA2A96831000FFB734 /* SignInStoryboard.storyboard */,
-				BC1B83962A9678F800FFB734 /* Main.storyboard */,
 				BC1B839B2A9678FA00FFB734 /* LaunchScreen.storyboard */,
+				BC1B83AA2A96831000FFB734 /* SignInStoryboard.storyboard */,
+				BC1B83B72A97594500FFB734 /* SignUpStoryboard.storyboard */,
+				BC1B83962A9678F800FFB734 /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BC1B83B62A9758D000FFB734 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC1B83B92A975DCB00FFB734 /* SignInViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1B83B82A97594500FFB734 /* SignUpStoryboard.storyboard in Resources */,
 				BC1B839D2A9678FA00FFB734 /* LaunchScreen.storyboard in Resources */,
 				BC1B839A2A9678FA00FFB734 /* Assets.xcassets in Resources */,
 				BC1B83982A9678F800FFB734 /* Main.storyboard in Resources */,
@@ -157,6 +172,7 @@
 			files = (
 				BC1B83912A9678F800FFB734 /* AppDelegate.swift in Sources */,
 				BC1B83932A9678F800FFB734 /* SceneDelegate.swift in Sources */,
+				BC1B83BA2A975DCB00FFB734 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
