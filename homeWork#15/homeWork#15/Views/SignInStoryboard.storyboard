@@ -80,6 +80,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RfE-Ef-Cm9"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="cIA-Z6-xAO" id="srS-AA-FfV"/>
+                        <outlet property="errorLabel" destination="GCL-LZ-m2B" id="8mn-xD-0fJ"/>
+                        <outlet property="passwordTextField" destination="JuM-iN-Kgp" id="GW5-t3-urL"/>
+                        <outlet property="signInButton" destination="yVi-N4-xkA" id="uIi-ct-vmX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

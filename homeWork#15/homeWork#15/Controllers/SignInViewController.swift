@@ -9,11 +9,31 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel! {
+        didSet { errorLabel.isHidden = true }
+    }
+    @IBOutlet weak var signInButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        setupUI()
     }
+    
+    private func setupUI() {
+        signInButton.isEnabled = false
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
     /*
