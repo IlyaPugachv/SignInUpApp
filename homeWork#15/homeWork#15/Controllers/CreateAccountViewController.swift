@@ -26,9 +26,9 @@ class CreateAccountViewController: BaseViewController {
     // scrollView
     @IBOutlet weak var scrollView: UIScrollView!
     
-    private var isValidEmail = false
-    private var isConfPass = false
-//    private var passwordStrenght
+    private var isValidEmail = false { didSet { updateContinueBtState() } }
+    private var isConfPass = false { didSet { updateContinueBtState() } }
+    private var passwordStrenght: PasswordStrength = .veryWeak { didSet { updateContinueBtState() } }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +49,14 @@ class CreateAccountViewController: BaseViewController {
     }
     
     @IBAction func passTFAction(_ sender: UITextField) {
+        if let passText = sender.text,
+           !passText.isEmpty {
+            passwordStrenght = VerivicationService.isValidPassword(pass: passText)
+        } else {
+            passwordStrenght = .veryWeak
+        }
+        errorConfirmPassLbl.isHidden = passwordStrenght != .veryWeak
+        setupStrongIndicatorsViews()
     }
     
     @IBAction func confPassTFAction(_ sender: UITextField) {
@@ -61,6 +69,17 @@ class CreateAccountViewController: BaseViewController {
             isConfPass = false
         }
         errorConfirmPassLbl.isHidden = isConfPass
+        }
+    
+    @IBAction func signInAction() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func continueAction() {
+        if let email = emailTextField.text,
+           let password = passwordTextField.text {
+            
+        }
     }
     
     
@@ -70,6 +89,19 @@ class CreateAccountViewController: BaseViewController {
     
     
     
+    private func updateContinueBtState() {
+        continueButton.isEnabled = isValidEmail && isConfPass && passwordStrenght != .veryWeak
+    }
+    
+    private func setupStrongIndicatorsViews() {
+        strongPassIndicatorsViews.enumerated().forEach { index, view in
+            if index <= (passwordStrenght.rawValue - 1) {
+                view.alpha = 1
+            } else {
+                view.alpha = 0.2
+            }
+        }
+    }
     
     private func startKeyboardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
