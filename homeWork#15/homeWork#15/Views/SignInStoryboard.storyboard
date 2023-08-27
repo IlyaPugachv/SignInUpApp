@@ -17,9 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdU-S7-59g">
-                                <rect key="frame" x="191.66666666666663" y="112.99999999999999" width="176.33333333333337" height="34.333333333333329"/>
+                                <rect key="frame" x="228.33333333333337" y="113" width="139.66666666666663" height="28.333333333333343"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Create new account"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create new account">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="0.0"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="rs0-Uu-PiN" kind="show" id="I8V-IF-G6n"/>
                                 </connections>
@@ -30,7 +32,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm6-bH-Oer">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="T9w-Uj-1X2">
@@ -71,7 +73,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yVi-N4-xkA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="680" id="6mt-4m-Nru"/>
                             <constraint firstItem="aIJ-dE-fEU" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="6pV-EQ-RCs"/>
@@ -84,6 +86,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="RfE-Ef-Cm9"/>
                     <connections>
+                        <outlet property="createNewAccount" destination="wdU-S7-59g" id="kYj-2L-G2y"/>
                         <outlet property="emailTextField" destination="cIA-Z6-xAO" id="srS-AA-FfV"/>
                         <outlet property="errorLabel" destination="GCL-LZ-m2B" id="8mn-xD-0fJ"/>
                         <outlet property="passwordTextField" destination="JuM-iN-Kgp" id="GW5-t3-urL"/>

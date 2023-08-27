@@ -1,10 +1,3 @@
-//
-//  SignInViewController.swift
-//  homeWork#15
-//
-//  Created by Илья Пугачёв on 24.08.23.
-//
-
 import UIKit
 
 class SignInViewController: UIViewController {
@@ -15,6 +8,9 @@ class SignInViewController: UIViewController {
         didSet { errorLabel.isHidden = true }
     }
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var createNewAccount: UIButton! {
+        didSet { createNewAccount.backgroundColor = .red }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +19,15 @@ class SignInViewController: UIViewController {
     
     private func setupUI() {
         signInButton.isEnabled = false
+        createNewAccount.backgroundColor = .red
+     
     }
     
-    
-    
-    
+//    setThisTimeBtn.backgroundColor = .black
+//    setThisTimeBtn.layer.cornerRadius = 20
+//    setThisTimeBtn.setImage(nil, for: .normal)
+//    clearButton.setImage(nil, for: .normal)
+
     
     
     
