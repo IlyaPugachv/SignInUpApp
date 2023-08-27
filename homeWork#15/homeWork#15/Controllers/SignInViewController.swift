@@ -8,27 +8,30 @@ class SignInViewController: UIViewController {
         didSet { errorLabel.isHidden = true }
     }
     @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var createNewAccount: UIButton! {
-        didSet { createNewAccount.backgroundColor = .red }
-    }
+    @IBOutlet weak var createNewAccount: UIButton!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        roundingCorners()
     }
     
     private func setupUI() {
         signInButton.isEnabled = false
-        createNewAccount.backgroundColor = .red
-     
+        createNewAccount.backgroundColor = .white
+        createNewAccount.titleLabel?.textColor = .black
+        signInButton.backgroundColor = .black
+        signInButton.titleLabel?.textColor = .black
     }
     
-//    setThisTimeBtn.backgroundColor = .black
-//    setThisTimeBtn.layer.cornerRadius = 20
-//    setThisTimeBtn.setImage(nil, for: .normal)
-//    clearButton.setImage(nil, for: .normal)
+    private func roundingCorners() {
+        createNewAccount.layer.cornerRadius = 15
+        signInButton.layer.cornerRadius = 12
+    }
+  
 
-    
     
     
     
