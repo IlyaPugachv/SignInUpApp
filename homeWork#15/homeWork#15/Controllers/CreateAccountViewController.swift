@@ -78,7 +78,8 @@ class CreateAccountViewController: BaseViewController {
     @IBAction func continueAction() {
         if let email = emailTextField.text,
            let password = passwordTextField.text {
-            
+            let userModel = UserModel(name: nameTextField.text, email: email, pass: password)
+            performSegue(withIdentifier: "goToVerifScreen", sender: userModel)
         }
     }
     
