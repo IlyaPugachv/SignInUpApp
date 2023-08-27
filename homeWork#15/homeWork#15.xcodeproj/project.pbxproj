@@ -17,6 +17,7 @@
 		BC1B83BA2A975DCB00FFB734 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1B83B92A975DCB00FFB734 /* SignInViewController.swift */; };
 		BC1B83BC2A9771D100FFB734 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1B83BB2A9771D100FFB734 /* CreateAccountViewController.swift */; };
 		BC1B83BF2A977B5300FFB734 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1B83BE2A977B5300FFB734 /* UIViewControllerExt.swift */; };
+		BCF89CE02A9B807B00B03265 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF89CDF2A9B807B00B03265 /* VerificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BC1B83B92A975DCB00FFB734 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BC1B83BB2A9771D100FFB734 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		BC1B83BE2A977B5300FFB734 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		BCF89CDF2A9B807B00B03265 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		BC1B838F2A9678F800FFB734 /* homeWork#15 */ = {
 			isa = PBXGroup;
 			children = (
+				BCF89CDE2A9B803400B03265 /* Services */,
 				BC1B83BD2A977B2100FFB734 /* Extensions */,
 				BC1B83B62A9758D000FFB734 /* Controllers */,
 				BC1B83A52A967D9B00FFB734 /* Views */,
@@ -109,6 +112,14 @@
 				BC1B83BE2A977B5300FFB734 /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BCF89CDE2A9B803400B03265 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BCF89CDF2A9B807B00B03265 /* VerificationService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 			files = (
 				BC1B83BF2A977B5300FFB734 /* UIViewControllerExt.swift in Sources */,
 				BC1B83BC2A9771D100FFB734 /* CreateAccountViewController.swift in Sources */,
+				BCF89CE02A9B807B00B03265 /* VerificationService.swift in Sources */,
 				BC1B83912A9678F800FFB734 /* AppDelegate.swift in Sources */,
 				BC1B83932A9678F800FFB734 /* SceneDelegate.swift in Sources */,
 				BC1B83BA2A975DCB00FFB734 /* SignInViewController.swift in Sources */,
