@@ -8,24 +8,25 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    
+    @IBOutlet weak var infoLbl: UILabel!
 
     var userModel: UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func continueAction() {
+        navigationController?.popToRootViewController(animated: true)
     }
-    */
-
+   
+    private func setupUI() {
+        infoLbl.text = "\(userModel?.name ?? "") to our cool App"
+    }
 }
+
+
+

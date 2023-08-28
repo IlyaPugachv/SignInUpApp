@@ -72,7 +72,7 @@ class CreateAccountViewController: BaseViewController {
     }
     
     @IBAction func signInAction() {
-        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func continueAction() {

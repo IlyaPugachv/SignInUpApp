@@ -308,10 +308,10 @@
             </objects>
             <point key="canvasLocation" x="787" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="Xr4-Fa-kkn">
             <objects>
-                <viewController id="mPa-E6-jSI" sceneMemberID="viewController">
+                <viewController id="mPa-E6-jSI" customClass="WelcomeViewController" customModule="homeWork_15" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aVW-8d-g0j">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,6 +337,9 @@
                                 <rect key="frame" x="150.33333333333334" y="757.66666666666663" width="92.666666666666657" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Continue"/>
+                                <connections>
+                                    <action selector="continueAction" destination="mPa-E6-jSI" eventType="touchUpInside" id="Z9s-gf-LVu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wmu-Xe-FA0"/>
@@ -349,6 +352,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JDy-FI-Rna"/>
+                    <connections>
+                        <outlet property="infoLbl" destination="FgA-Q1-N89" id="rZ3-A1-ubR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0b-FT-2VE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
