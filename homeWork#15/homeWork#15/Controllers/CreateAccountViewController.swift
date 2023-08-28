@@ -29,7 +29,7 @@ class CreateAccountViewController: BaseViewController {
     private var isValidEmail = false { didSet { updateContinueBtState() } }
     private var isConfPass = false { didSet { updateContinueBtState() } }
     private var passwordStrenght: PasswordStrength = .veryWeak { didSet { updateContinueBtState() } }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         strongPassIndicatorsViews.forEach { view in view.alpha = 0.2 }
@@ -69,7 +69,7 @@ class CreateAccountViewController: BaseViewController {
             isConfPass = false
         }
         errorConfirmPassLbl.isHidden = isConfPass
-        }
+    }
     
     @IBAction func signInAction() {
         navigationController?.popToRootViewController(animated: true)
@@ -125,25 +125,26 @@ class CreateAccountViewController: BaseViewController {
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
      // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
-}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destVC = segue.destination as? VerificationsVC,
+              let userModel = sender as? UserModel else { return }
+            destVC.userModel = userModel
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+     
+
