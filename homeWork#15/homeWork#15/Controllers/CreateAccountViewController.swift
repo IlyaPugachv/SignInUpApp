@@ -12,6 +12,7 @@ class CreateAccountViewController: BaseViewController {
     // Create strong password
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorPasswrodLbl: UILabel!
+    @IBOutlet weak var passEyeButton: UIButton!
     
     // strongPassIndicatorsViews
     @IBOutlet var strongPassIndicatorsViews: [UIView]!
@@ -48,6 +49,19 @@ class CreateAccountViewController: BaseViewController {
         errorEmailLbl.isHidden = isValidEmail
     }
     
+    @IBAction func passwordDisplay(_ sender: UIButton) {
+        passwordTextField.isSecureTextEntry.toggle()
+        if passwordTextField.isSecureTextEntry {
+            if let image = UIImage(systemName: "eye.fill") {
+                sender.setImage(image, for: .normal)
+            }
+        } else {
+            if let image = UIImage(systemName: "eye.slash.fill") {
+                sender.setImage(image, for: .normal)
+            }
+        }
+    }
+    
     @IBAction func passTFAction(_ sender: UITextField) {
         if let passText = sender.text,
            !passText.isEmpty {
@@ -82,6 +96,7 @@ class CreateAccountViewController: BaseViewController {
             performSegue(withIdentifier: "goToVerifScreen", sender: userModel)
         }
     }
+    
     
     
     
