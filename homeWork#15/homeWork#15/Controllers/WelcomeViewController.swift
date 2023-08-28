@@ -18,10 +18,7 @@ class WelcomeViewController: UIViewController {
         setupUI()
     }
     
-    
-    @IBAction func continueAction() {
-        navigationController?.popToRootViewController(animated: true)
-    }
+    @IBAction func continueAction() { navigationController?.popToRootViewController(animated: true) }
    
     private func setupUI() {
         infoLbl.text = "\(userModel?.name ?? "") to our cool App"

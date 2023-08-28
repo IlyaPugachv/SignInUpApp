@@ -2,6 +2,9 @@ import UIKit
 
 class CreateAccountViewController: BaseViewController {
     
+    // Sign in button
+    @IBOutlet weak var signInButton: UIButton!
+    
     // Enter your email
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var errorEmailLbl: UILabel!
@@ -36,6 +39,7 @@ class CreateAccountViewController: BaseViewController {
         strongPassIndicatorsViews.forEach { view in view.alpha = 0.2 }
         hideKeyboardWhenTappedAround()
         startKeyboardObserver()
+        setupUI()
     }
     
     @IBAction func emailTFAction(_ sender: UITextField) {
@@ -97,14 +101,6 @@ class CreateAccountViewController: BaseViewController {
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
     private func updateContinueBtState() {
         continueButton.isEnabled = isValidEmail && isConfPass && passwordStrenght != .veryWeak
     }
@@ -139,8 +135,12 @@ class CreateAccountViewController: BaseViewController {
         scrollView.scrollIndicatorInsets = contentInsets
     }
     
-    
-     // MARK: - Navigation
+    private func setupUI() {
+        signInButton.titleLabel?.textColor = .black
+        continueButton.titleLabel?.textColor = .white
+        continueButton.backgroundColor = .black
+        continueButton.layer.cornerRadius = 15
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destVC = segue.destination as? VerificationsVC,
