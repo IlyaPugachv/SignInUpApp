@@ -136,9 +136,8 @@ class CreateAccountViewController: BaseViewController {
     }
     
     private func setupUI() {
-        signInButton.titleLabel?.textColor = .black
+        signInButton.titleLabel?.textColor = .white
         continueButton.titleLabel?.textColor = .white
-        continueButton.backgroundColor = .black
         continueButton.layer.cornerRadius = 15
     }
     
