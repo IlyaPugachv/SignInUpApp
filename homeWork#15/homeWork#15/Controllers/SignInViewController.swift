@@ -14,6 +14,10 @@ class SignInViewController: BaseViewController {
         super.viewDidLoad()
         setupUI()
         roundingCorners()
+        
+        if let _ = UserDefaultsService.getUserModel() {
+            goToTabBarController()
+        }
     }
     
     @IBAction func signInAction() {
