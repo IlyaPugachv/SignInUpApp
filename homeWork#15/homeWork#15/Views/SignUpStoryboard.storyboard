@@ -322,6 +322,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0cy-kj-232"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="tintColor"/>
                         <constraints>
                             <constraint firstItem="0cy-kj-232" firstAttribute="trailing" secondItem="fH6-Yi-CyB" secondAttribute="trailing" constant="25" id="BRB-8d-m8G"/>
                             <constraint firstItem="fH6-Yi-CyB" firstAttribute="centerY" secondItem="0cy-kj-232" secondAttribute="centerY" id="bAE-ct-1DL"/>
@@ -395,10 +396,14 @@
             <point key="canvasLocation" x="1567" y="-2"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="eye.fill" catalog="system" width="128" height="80"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
