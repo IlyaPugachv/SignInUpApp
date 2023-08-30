@@ -16,8 +16,32 @@ class SignInViewController: BaseViewController {
         roundingCorners()
     }
     
+    @IBAction func signInAction() {
+        errorLabel.isHidden = true
+        guard let email = emailTextField.text,
+              let pass = passwordTextField.text,
+              let userModel = UserDefaultsService.getUserModel(),
+              email == userModel.email,
+              pass == userModel.pass else {
+            errorLabel.isHidden = true
+            return
+        }
+        goToTabBarController()
+    }
+    
+        private func goToTabBarController() {
+            let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+            guard let viewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        emailTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
     private func setupUI() {
-        signInButton.isEnabled = false
+//        signInButton.isEnabled = false
         createNewAccount.backgroundColor = .white
         createNewAccount.titleLabel?.textColor = .black
         signInButton.titleLabel?.textColor = .white

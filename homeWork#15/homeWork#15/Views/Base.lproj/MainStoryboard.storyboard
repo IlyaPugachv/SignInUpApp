@@ -43,7 +43,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Z9U-Fa-La0">
             <objects>
-                <tabBarController id="UMm-4k-jLN" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UMm-4k-jLN" customClass="TabBarController" customModule="homeWork_15" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" shadowImage="square.and.arrow.up" catalog="system" id="LSB-Qc-gfs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

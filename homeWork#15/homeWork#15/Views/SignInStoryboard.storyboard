@@ -72,6 +72,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Sign in">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signInAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C2E-bO-WyO"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poweroff" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dW8-MY-6h7">
                                 <rect key="frame" x="77" y="81.000000000000014" width="221" height="117.33333333333336"/>
