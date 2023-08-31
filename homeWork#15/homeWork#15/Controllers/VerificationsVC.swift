@@ -6,6 +6,8 @@ class VerificationsVC: BaseViewController {
     let randomInt = Int.random(in: 100000 ... 999999)
     var sleepTime = 3
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var infoLbl: UILabel!
     @IBOutlet weak var secretCodeTF: UITextField!
     @IBOutlet weak var errorTF: UILabel!
@@ -17,6 +19,8 @@ class VerificationsVC: BaseViewController {
         hideKeyboardWhenTappedAround()
         startKeyboardObserver()
     }
+    
+    // MARK: - IBAction
     
     @IBAction func codeTFAction(_ sender: UITextField) {
         errorTF.isHidden = true
@@ -37,6 +41,8 @@ class VerificationsVC: BaseViewController {
         performSegue(withIdentifier: "goToWelcomeScreen", sender: nil)
     }
     
+    // MARK: - Working with the keyboard
+    
     private func startKeyboardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -55,11 +61,14 @@ class VerificationsVC: BaseViewController {
         }
         centerConstraint.constant += keyboardSize.height / 2
     }
+    
+    // MARK: - SetupUI
 
     private func setupUI() {
         infoLbl.text = "Please enter code \(randomInt) from \(userModel?.email ?? "")"
     }
 
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destVC = segue.destination as? WelcomeViewController else { return }
         destVC.userModel = userModel
