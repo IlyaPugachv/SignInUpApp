@@ -2,16 +2,15 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var yourNameLbl: UILabel!
     @IBOutlet weak var yourEmailLbl: UILabel!
     
-    var userModel: UserModel?
+    var userModel  = UserDefaultsService.getUserModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-    
-    
     
     @IBAction func deleteAccountAction() {
         UserDefaultsService.cleanUserDefaults()
@@ -22,14 +21,10 @@ class ProfileViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
-     func setupUI() {
-         yourEmailLbl.text = "\(userModel?.email ?? "") to our cool App"
-        }
-   
-   
-  
-    
-
+    func setupUI() {
+        yourEmailLbl.text = "\(userModel?.email ?? "")"
+        yourNameLbl.text = "\(userModel?.name ?? "")"
+    }
 }
 
 
