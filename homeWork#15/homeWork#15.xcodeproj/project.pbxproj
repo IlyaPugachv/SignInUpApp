@@ -23,6 +23,7 @@
 		BC35D9C12A9F748B007DAD52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC35D9C02A9F748B007DAD52 /* ProfileViewController.swift */; };
 		BC74A10B2A9BA862005164B1 /* VerificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC74A10A2A9BA862005164B1 /* VerificationsVC.swift */; };
 		BC74A10D2A9C9511005164B1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC74A10C2A9C9511005164B1 /* WelcomeViewController.swift */; };
+		BC957B152AA0B8F100C8F608 /* ChangeUserAccountDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC957B142AA0B8F100C8F608 /* ChangeUserAccountDataViewController.swift */; };
 		BCF89CE02A9B807B00B03265 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF89CDF2A9B807B00B03265 /* VerificationService.swift */; };
 		BCF89CE32A9BA2CE00B03265 /* UserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF89CE22A9BA2CE00B03265 /* UserModels.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		BC35D9C02A9F748B007DAD52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BC74A10A2A9BA862005164B1 /* VerificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationsVC.swift; sourceTree = "<group>"; };
 		BC74A10C2A9C9511005164B1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		BC957B142AA0B8F100C8F608 /* ChangeUserAccountDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserAccountDataViewController.swift; sourceTree = "<group>"; };
 		BCF89CDF2A9B807B00B03265 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		BCF89CE22A9BA2CE00B03265 /* UserModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 				BC74A10C2A9C9511005164B1 /* WelcomeViewController.swift */,
 				BC35D9BE2A9F4D7F007DAD52 /* TabBarController.swift */,
 				BC35D9C02A9F748B007DAD52 /* ProfileViewController.swift */,
+				BC957B142AA0B8F100C8F608 /* ChangeUserAccountDataViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC74A10D2A9C9511005164B1 /* WelcomeViewController.swift in Sources */,
+				BC957B152AA0B8F100C8F608 /* ChangeUserAccountDataViewController.swift in Sources */,
 				BC1B83BF2A977B5300FFB734 /* UIViewControllerExt.swift in Sources */,
 				BC35D9B72A9F38F0007DAD52 /* UserDefaultsService.swift in Sources */,
 				BCF89CE32A9BA2CE00B03265 /* UserModels.swift in Sources */,

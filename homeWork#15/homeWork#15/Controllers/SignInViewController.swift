@@ -2,6 +2,8 @@ import UIKit
 
 class SignInViewController: BaseViewController {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel! {
@@ -20,6 +22,8 @@ class SignInViewController: BaseViewController {
         }
     }
     
+    // MARK: - IBAction
+    
     @IBAction func signInAction() {
         errorLabel.isHidden = true
         guard let email = emailTextField.text,
@@ -27,17 +31,17 @@ class SignInViewController: BaseViewController {
               let userModel = UserDefaultsService.getUserModel(),
               email == userModel.email,
               pass == userModel.pass else {
-            errorLabel.isHidden = true
+            errorLabel.isHidden = false
             return
         }
         goToTabBarController()
     }
     
-        private func goToTabBarController() {
-            let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
-            guard let viewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
-            navigationController?.pushViewController(viewController, animated: true)
-        }
+    private func goToTabBarController() {
+        let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         emailTextField.text = ""
@@ -45,7 +49,6 @@ class SignInViewController: BaseViewController {
     }
     
     private func setupUI() {
-//        signInButton.isEnabled = false
         createNewAccount.backgroundColor = .white
         createNewAccount.titleLabel?.textColor = .black
         signInButton.titleLabel?.textColor = .white

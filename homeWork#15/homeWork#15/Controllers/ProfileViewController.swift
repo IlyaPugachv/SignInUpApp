@@ -1,7 +1,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var yourNameLbl: UILabel!
     @IBOutlet weak var yourEmailLbl: UILabel!
     
