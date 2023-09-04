@@ -6,9 +6,7 @@ class SignInViewController: BaseViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel! {
-        didSet { errorLabel.isHidden = true }
-    }
+    @IBOutlet weak var errorLabel: UILabel! { didSet { errorLabel.isHidden = true } }
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var createNewAccount: UIButton!
     
@@ -56,7 +54,7 @@ class SignInViewController: BaseViewController {
     
     private func roundingCorners() {
         createNewAccount.layer.cornerRadius = 15
-        signInButton.layer.cornerRadius = 12
+        signInButton.layer.cornerRadius = 15
     }
 }
 

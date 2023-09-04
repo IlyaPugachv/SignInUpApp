@@ -10,10 +10,10 @@ class ChangeUserAccountDataViewController: BaseViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet var strongPassword: [UIView]!
     @IBOutlet weak var confirmPassword: UITextField!
-    @IBOutlet weak var doneButton: UIButton! {
-        didSet { doneButton.isEnabled = false }
-    }
+    @IBOutlet weak var doneButton: UIButton! { didSet { doneButton.isEnabled = false } }
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    // MARK: - Private
     
     private var isValidEmail = false { didSet { updateContinueBtState() } }
     private var isConfPass = false { didSet { updateContinueBtState() } }

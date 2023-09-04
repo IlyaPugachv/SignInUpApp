@@ -32,7 +32,7 @@ class VerificationsVC: BaseViewController {
             let dispatchAfter = DispatchTimeInterval.seconds(sleepTime)
             let deadLine = DispatchTime.now() + dispatchAfter
             DispatchQueue.main.asyncAfter(deadline: deadLine) {
-                sender.isUserInteractionEnabled = true
+            sender.isUserInteractionEnabled = true
                 self.errorTF.isHidden = true
                 self.sleepTime *= 2
             }
