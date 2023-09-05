@@ -1,10 +1,3 @@
-//
-//  WelcomeViewController.swift
-//  homeWork#15
-//
-//  Created by Илья Пугачёв on 28.08.23.
-//
-
 import UIKit
 
 class WelcomeViewController: UIViewController {
@@ -18,7 +11,11 @@ class WelcomeViewController: UIViewController {
         setupUI()
     }
     
-    @IBAction func continueAction() { navigationController?.popToRootViewController(animated: true) }
+    @IBAction func continueAction() {
+        guard let userModel = userModel else { return }
+        UserDefaultsService.saveUserModel(userModel: userModel)
+        navigationController?.popToRootViewController(animated: true)
+    }
    
     private func setupUI() {
         infoLbl.text = "\(userModel?.name ?? "") to our cool App"

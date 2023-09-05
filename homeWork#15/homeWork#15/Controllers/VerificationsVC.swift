@@ -6,6 +6,8 @@ class VerificationsVC: BaseViewController {
     let randomInt = Int.random(in: 100000 ... 999999)
     var sleepTime = 3
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var infoLbl: UILabel!
     @IBOutlet weak var secretCodeTF: UITextField!
     @IBOutlet weak var errorTF: UILabel!
@@ -18,6 +20,8 @@ class VerificationsVC: BaseViewController {
         startKeyboardObserver()
     }
     
+    // MARK: - IBAction
+    
     @IBAction func codeTFAction(_ sender: UITextField) {
         errorTF.isHidden = true
         guard let text = sender.text, !text.isEmpty, text == randomInt.description else {
@@ -28,7 +32,7 @@ class VerificationsVC: BaseViewController {
             let dispatchAfter = DispatchTimeInterval.seconds(sleepTime)
             let deadLine = DispatchTime.now() + dispatchAfter
             DispatchQueue.main.asyncAfter(deadline: deadLine) {
-                sender.isUserInteractionEnabled = true
+            sender.isUserInteractionEnabled = true
                 self.errorTF.isHidden = true
                 self.sleepTime *= 2
             }
@@ -36,6 +40,8 @@ class VerificationsVC: BaseViewController {
         }
         performSegue(withIdentifier: "goToWelcomeScreen", sender: nil)
     }
+    
+    // MARK: - Working with the keyboard
     
     private func startKeyboardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -55,11 +61,14 @@ class VerificationsVC: BaseViewController {
         }
         centerConstraint.constant += keyboardSize.height / 2
     }
+    
+    // MARK: - SetupUI
 
     private func setupUI() {
         infoLbl.text = "Please enter code \(randomInt) from \(userModel?.email ?? "")"
     }
 
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destVC = segue.destination as? WelcomeViewController else { return }
         destVC.userModel = userModel
